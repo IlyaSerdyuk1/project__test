@@ -1,0 +1,245 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.nav {
+    padding: 2.5rem 5rem;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.nav__left {
+    transition: 1s all;
+}
+.logo img {
+    width: 17rem;
+}
+
+.nav__left button {
+    border: none;
+    background-color: white;
+    margin-right: 1.5rem;
+
+}
+.nav__left a {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+.nav__left button:hover {
+    transition: all 1s;
+    transform: scale(1.1) rotate(3deg);
+    /*box-shadow: 0px 4.5px 4.5px rgba(0, 0, 0, 0.25);*/
+    /*transform: rotate(3deg);*/
+}
+.nav__right button {
+    border: none;
+    background-color: antiquewhite;
+    padding: .5rem 2.5rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.paralax_1 {
+    background-image: url("https://cdn.thewirecutter.com/wp-content/media/2020/12/cashmeresweaters-2048px-0995.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 30vh 0 70vh 0;
+    margin-bottom: 4rem;
+}
+.paralax_1 h1 {
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 4px;
+    animation-name: up;
+    position: relative;
+    animation-duration: 2s;
+
+
+}
+@keyframes up {
+    0% {
+        top: -500px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+
+    }
+
+}
+.paralax_1 h2 {
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 4px;
+    animation-name: up;
+    position: relative;
+    animation-duration: 2s;
+
+
+
+}
+.content {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(0px) translateY(200px);
+
+}
+
+.card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 25rem;
+    height: 30rem;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    transition: all 1s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-20px) scale(1.05);
+    transition: all 1s;
+    box-shadow: 0px 4.5px 4.5px rgba(0, 0, 0, 0.25);
+}
+.card p {
+    font-size: 25px;
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+    color: black;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+.card_1 {
+    background-image: url("https://basket-03.wb.ru/vol348/part34816/34816561/images/big/1.jpg");
+}
+
+.card_2 {
+    background-image: url("https://basket-02.wb.ru/vol145/part14543/14543129/images/big/1.jpg");
+}
+
+.card_3 {
+    background-image: url("https://basket-01.wb.ru/vol113/part11388/11388415/images/big/1.webp");
+}
+.card_4 {
+    background-image: url("https://basket-05.wb.ru/vol819/part81963/81963421/images/big/1.jpg");
+}
+.card_5 {
+    background-image: url("https://basket-03.wb.ru/vol314/part31489/31489194/images/big/1.jpg");
+}
+.category__title {
+    margin-bottom: 2rem;
+    font-size: 30px;
+    margin-left: 3rem;
+}
+.sales {
+ display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5rem;
+    gap: 2rem;
+    transition: all 2s;
+}
+.sales a {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.sales1 {
+    max-height: 40rem;
+
+}
+.sales_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+.sales2 {
+    max-width: 30rem;
+    max-height: 20rem;
+
+}
+.right__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+.sales a:hover {
+    transition: all 2s;
+    border: 5px solid #fddfac;
+    transform: scale(1.1);
+}
+
+.test {
+    transition: all 1s;
+    transform: translateX(-300px);
+    opacity: 0;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+}
+.test p {
+    font-size: 50px;
+    margin-bottom: 100px;
+    animation-fill-mode: forwards;
+    width: 100%;
+    text-align: center;
+}
+.__active {
+    opacity: 1;
+    transform: translateX(0px);
+}
+.category__title.__active{
+    transition: all 1s ease 0.2s;
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+}
+.category__title {
+    transform: translateY(200px);
+    opacity: 0;
+}
+.sales {
+    transform: translateX(-500px);
+    opacity: 0;
+}
+.sales.__active {
+    transition: all 2s ease 0.2s;
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+}
+
